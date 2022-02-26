@@ -4,7 +4,7 @@ const router = new express.Router();
 require("../db/mongoose");
 const User = require("../models/user");
 const auth = require("../middlewares/auth");
-const { createRoutesFromChildren } = require("react-router-dom");
+
 
 router.post("/users", async (req, res) => {
   const user = new User(req.body);
@@ -22,8 +22,7 @@ router.post("/users", async (req, res) => {
   }
 });
 
-//regular updatse on favourate internship fields
-router.post("/users/fav", auth, async (req, res) => {});
+
 
 router.post("/users/login", async (req, res) => {
   try {
