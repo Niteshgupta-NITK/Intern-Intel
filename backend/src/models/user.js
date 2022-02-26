@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const validator = require("validator");
 const { farsiLocales } = require("validator/lib/alpha");
 const jwt = require("jsonwebtoken");
-const feed = require("./feeds");
 
 const UserSchema = new mongoose.Schema(
   {
@@ -38,7 +37,22 @@ const UserSchema = new mongoose.Schema(
     },
     field: {
       type: String,
+      required:true
     },
+    colleges: [
+      {
+        college: {
+          type: String,
+        },
+      },
+    ],
+    profs: [
+      {
+        prof: {
+          type: String,
+        },
+      },
+    ],
     tokens: [
       {
         token: {
@@ -51,12 +65,8 @@ const UserSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-//Define relatiiionship between task and users
-UserSchema.virtual("feeds", {
-  ref: "feed",
-  localField: "_id",
-  foreignField: "owner",
-});
+
+
 //Define public profile to be sent back to user
 UserSchema.methods.getPublicProfile = function () {
   const user = this;
@@ -95,10 +105,6 @@ UserSchema.pre("save", async function (next) {
   next();
 });
 //remove tasks when user is deleted
-UserSchema.pre("remove", async function (next) {
-  const user = this;
-  await feed.deleteMany({ owner: user._id });
-  next();
-});
+
 const User = mongoose.model("User", UserSchema);
 module.exports = User;
