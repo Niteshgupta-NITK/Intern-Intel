@@ -6,6 +6,7 @@ const { farsiLocales } = require("validator/lib/alpha");
 const jwt = require("jsonwebtoken");
 
 const UserSchema = new mongoose.Schema(
+<<<<<<< HEAD
     {
         name: {
             type: String,
@@ -23,6 +24,56 @@ const UserSchema = new mongoose.Schema(
                     throw new Error("Imvalid email");
                 }
             },
+=======
+  {
+    name: {
+      type: String,
+      trim: true,
+      required: false,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      trim: true,
+      lowercase: true,
+      validate(val) {
+        if (!validator.isEmail(val)) {
+          throw new Error("Imvalid email");
+        }
+      },
+    },
+    password: {
+      type: String,
+      required: true,
+      trim: true,
+      min: 7,
+      validate(val) {
+        if (val.toLowerCase() == "password" || val.length < 7) {
+          throw new Error("Invalid Password");
+        }
+      },
+    },
+    field: {
+      type: String,
+      required: false,
+    },
+    colleges: [
+      {
+        type: String,
+      },
+    ],
+    profs: [
+      {
+        type: String,
+      },
+    ],
+    tokens: [
+      {
+        token: {
+          type: String,
+          required: true,
+>>>>>>> 5cbde2a0243eb6230d4cbe49f81dff0bd092d2bc
         },
         password: {
             type: String,
