@@ -12,10 +12,10 @@ A web application to serve following purposes-
 3.Make tedious job of searching and keeping eye on universities , much smarter and negligible time consuming.
 
 ## Teckstack used -
-<br/>MongoDB
-<br/>Express
-<br/> ReactJS
-<br/> NodeJS
+<br/>```MongoDB```
+<br/>```Express```
+<br/>``` ReactJS```
+<br/>``` NodeJS```
 
 
 ## Installation Steps -
@@ -33,16 +33,16 @@ Navigate to backend directory and run  <br/>
 
 
 ## Libraries and Dependencies -
-```Search io API``
-```ReactJS```
-```node-mailer```
-```bcyrpt```
-```json-webtoken```
-```validator```
-```node-schedule```
-```mongoose```
-```cors```
-```axios```
+```Search io API```<br/>
+```ReactJS```<br/>
+```node-mailer``` <br/>
+```bcyrpt``` <br/>
+```json-webtoken``` <br/>
+```validator```  <br/>
+```node-schedule``` <br/>
+```mongoose```  <br/>
+```cors```    <br/>
+```axios```   <br/>
 
 
 
