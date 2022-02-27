@@ -1,6 +1,7 @@
 # Internship Intel 
 
 (hackverse 3.0 hack)
+## Description -
 
 A web application to serve following purposes-
 
@@ -10,16 +11,42 @@ A web application to serve following purposes-
 
 3.Make tedious job of searching and keeping eye on universities , much smarter and negligible time consuming.
 
+## Teckstack used -
+<br/>MongoDB
+<br/>Express
+<br/> ReactJS
+<br/> NodeJS
 
-## To Run this project 
- Clone it using
+
+## Installation Steps -
+### To run this project 
+ Clone it using <br/>
 ```git clone git@github.com:predator4hack/hackverse-3.0.git ```
 <br/>
-and navigate to frotnend directory and run <br/>
+Navigate to frotnend directory and run <br/>
+```npm install```<br/>
 ```npm start```
 <br/>
-and navigate to backend directory and run  <br/>
+Navigate to backend directory and run  <br/>
+```npm install```<br/>
 ```npm test```
+
+
+## Libraries and Dependencies -
+```Search io API``
+```ReactJS```
+```node-mailer```
+```bcyrpt```
+```json-webtoken```
+```validator```
+```node-schedule```
+```mongoose```
+```cors```
+```axios```
+
+
+
+
 
 
 
