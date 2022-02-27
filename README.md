@@ -1,5 +1,5 @@
-# hackverse-3.0
-Internship Intel 
+#Internship Intel 
+(hackverse 3.0 hack)
 
 A web application to serve following purposes-
 
