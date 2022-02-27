@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
     FieldDictionary,
     FilterBuilder,
@@ -61,18 +61,23 @@ const researchFieldFilter = new FilterBuilder({
 });
 
 function Search() {
+    const [website, setWebsite] = useState("hello-world");
     const pipeline = new Pipeline(
         {
             account: "1645718176734614379",
-            collection: "hello-world",
+            collection: website,
         },
         "website"
     );
+    useEffect(() => {}, [website]);
+    function handleChange(newValue) {
+        setWebsite(newValue);
+    }
+    console.log(website);
 
-    const App = React.memo(() => {
+    const App = React.memo(({ handleChange }) => {
         const { searched } = useSearchContext();
         const [data, setData] = useState("");
-        const [website, setWebsite] = useState("website");
 
         const handleSubmit = (event) => {
             event.preventDefault();
@@ -80,12 +85,22 @@ function Search() {
             setData(new URLSearchParams(new FormData(event.target)).toString());
             console.log(data);
             if (data === "options=option1") {
-                setWebsite("MIT");
+                handleChange("mit");
             } else {
                 if (data === "options=option2") {
-                    setWebsite("UCUI");
-                } else {
-                    setWebsite("Harvard");
+                    setWebsite("hello-world");
+                } else if (data === "options=option3") {
+                    setWebsite("cambridge");
+                } else if (data === "options=option4") {
+                    setWebsite("stanford");
+                } else if (data === "options=option5") {
+                    setWebsite("ucberkaly");
+                } else if (data === "options=option6") {
+                    setWebsite("oxford");
+                } else if (data === "options=option7") {
+                    setWebsite("columbia");
+                } else if (data === "options=option8") {
+                    setWebsite("caltech");
                 }
             }
             // console.log(data.type);
@@ -98,7 +113,7 @@ function Search() {
                             onSubmit={handleSubmit}
                             className="flex space-x-4"
                         >
-                            <Select multiple name="options" className="flex-1">
+                            <Select name="options" className="flex-1">
                                 <Option value="option1">
                                     Massachusetts Institute of Technology: MIT
                                 </Option>
@@ -107,6 +122,24 @@ function Search() {
                                 </Option>
                                 <Option value="option3">
                                     Harvard University
+                                </Option>
+                                <Option value="option4">
+                                    University of Cambridge
+                                </Option>
+                                <Option value="option5">
+                                    Stanford University
+                                </Option>
+                                <Option value="option6">
+                                    University of California Berkaly
+                                </Option>
+                                <Option value="option7">
+                                    University of Oxford
+                                </Option>
+                                <Option value="option8">
+                                    University of Columbia
+                                </Option>
+                                <Option value="option9">
+                                    California Institute of Technology
                                 </Option>
                             </Select>
                             <div className="submit-button">
@@ -212,7 +245,7 @@ function Search() {
             }}
             searchOnLoad
         >
-            <App />
+            <App website={website} handleChange={handleChange} />
         </SearchProvider>
     );
 }

@@ -13,9 +13,9 @@
 ```
 
 ## Teckstack used -
-<br/>```MongoDB```
+```MongoDB```
 <br/>```Express```
-<br/>``` ReactJS```
+<br/> ```ReactJS```
 <br/>``` NodeJS```
 
 
