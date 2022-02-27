@@ -37,7 +37,7 @@ const Navbar = ({ toggle }) => {
                 <Nav scrollNav={scrolNav}>
                     <NavbarContainer>
                         <NavLogo to="/" onClick={toggleHome}>
-                            dolla
+                            Internship Intel
                         </NavLogo>
                         <MobileIcon onClick={toggle}>
                             <FaBars />

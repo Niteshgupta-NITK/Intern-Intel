@@ -37,66 +37,20 @@ const Footer = () => {
                                 <FooterLink to="/">Investors</FooterLink>
                                 <FooterLink to="/">Terms of Service</FooterLink>
                             </FooterLinksItems>
-                            <FooterLinksItems>
-                                <FooterLinkTitle>
-                                    {" "}
-                                    Privacy Policy
-                                </FooterLinkTitle>
-                                <FooterLink to="/signin">
-                                    How it Works
-                                </FooterLink>
-                                <FooterLink to="/signin">
-                                    Testimonials
-                                </FooterLink>
-                                <FooterLink to="/signin">Careers</FooterLink>
-                                <FooterLink to="/signin">Investors</FooterLink>
-                                <FooterLink to="/signin">
-                                    Terms of Service
-                                </FooterLink>
-                            </FooterLinksItems>
+                            
                         </FooterLinksWrapper>
                         <FooterLinksWrapper>
-                            <FooterLinksItems>
-                                <FooterLinkTitle>Developer2</FooterLinkTitle>
-                                <FooterLink to="/signin">
-                                    How it Works
-                                </FooterLink>
-                                <FooterLink to="/signin">
-                                    Testimonials
-                                </FooterLink>
-                                <FooterLink to="/signin">Careers</FooterLink>
-                                <FooterLink to="/signin">Investors</FooterLink>
-                                <FooterLink to="/signin">
-                                    Terms of Service
-                                </FooterLink>
-                            </FooterLinksItems>
-                            <FooterLinksItems>
-                                {" "}
-                                <FooterLinkTitle>
-                                    Drop suggestions
-                                </FooterLinkTitle>
-                                <FooterLink to="/signin">
-                                    How it Works
-                                </FooterLink>
-                                <FooterLink to="/signin">
-                                    Testimonials
-                                </FooterLink>
-                                <FooterLink to="/signin">Careers</FooterLink>
-                                <FooterLink to="/signin">Investors</FooterLink>
-                                <FooterLink to="/signin">
-                                    Terms of Service
-                                </FooterLink>
-                            </FooterLinksItems>
+                           
                         </FooterLinksWrapper>
                     </FooterLinksContaier>
                     <SocialMedia>
                         <SocialMediaWrap>
                             <SocialLogo to="/" onClick={toggleHome}>
-                                dolla
+                                Internship Intel
                             </SocialLogo>
                             <WebsiteRights>
                                 {" "}
-                                dolla © {new Date().getFullYear()}
+                                 © {new Date().getFullYear()}
                                 All rights reserved
                             </WebsiteRights>
                             <SocialIcons>
