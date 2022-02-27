@@ -23,6 +23,43 @@ import {
     useSearchContext,
 } from "@sajari/react-hooks";
 
+const researchFilter = new FilterBuilder({
+    title: "Research Area",
+    name: "Research Area",
+    type: "list",
+    multi: true,
+    format: "default",
+    array: false,
+    sort: "none",
+    hideCount: true,
+    options: {
+        "Aerospace Engineering": "boost ~ 50",
+        "Bio Engineering": "boost ~ 50",
+        "Civil & Environmental Engineering": "boost ~ 50",
+        "Computer Science": "boost = 50",
+        "Electrical Engineering": "boost ~ 50",
+        "Industrial & Enterprise Systems": "boost ~ 50",
+        "Material Science & Engineering": "boost ~ 50",
+        "Mechanical Science & Engineering": "boost ~ 50",
+        "Nuclear, Plasma and Radiological Engineering": "boost ~ 50",
+        Physics: "boost ~ 50",
+    },
+});
+
+const researchFieldFilter = new FilterBuilder({
+    title: "Fields of Research",
+    name: "Fields of Research",
+    type: "select",
+    multi: true,
+    format: "default",
+    array: false,
+    sort: "none",
+    hideCount: true,
+    options: {
+        "Architecture, Compilers, and Parallel Computing": "boost ~ 40",
+    },
+});
+
 function Search() {
     const pipeline = new Pipeline(
         {
@@ -32,59 +69,26 @@ function Search() {
         "website"
     );
 
-    // const fields = new FieldDictionary({
-    //     title: "name",
-    //     subtitle: (data) =>
-    //         data.level4 ||
-    //         data.level3 ||
-    //         data.level2 ||
-    //         data.level1 ||
-    //         data.brand,
-    // });
-    const researchFilter = new FilterBuilder({
-        title: "Research Area",
-        name: "Research Area",
-        type: "list",
-        multi: true,
-        format: "default",
-        array: false,
-        sort: "none",
-        hideCount: true,
-        options: {
-            "Aerospace Engineering": "boost ~ 50",
-            "Bio Engineering": "boost ~ 50",
-            "Civil & Environmental Engineering": "boost ~ 50",
-            "Computer Science": "boost = 50",
-            "Electrical Engineering": "boost ~ 50",
-            "Industrial & Enterprise Systems": "boost ~ 50",
-            "Material Science & Engineering": "boost ~ 50",
-            "Mechanical Science & Engineering": "boost ~ 50",
-            "Nuclear, Plasma and Radiological Engineering": "boost ~ 50",
-            Physics: "boost ~ 50",
-        },
-    });
-
-    const researchFieldFilter = new FilterBuilder({
-        title: "Fields of Research",
-        name: "Fields of Research",
-        type: "select",
-        multi: true,
-        format: "default",
-        array: false,
-        sort: "none",
-        hideCount: true,
-        options: {
-            "Architecture, Compilers, and Parallel Computing": "boost ~ 40",
-        },
-    });
-
     const App = React.memo(() => {
         const { searched } = useSearchContext();
         const [data, setData] = useState("");
+        const [website, setWebsite] = useState("website");
 
         const handleSubmit = (event) => {
             event.preventDefault();
+            // console.log(event.target[0]);
             setData(new URLSearchParams(new FormData(event.target)).toString());
+            console.log(data);
+            if (data === "options=option1") {
+                setWebsite("MIT");
+            } else {
+                if (data === "options=option2") {
+                    setWebsite("UCUI");
+                } else {
+                    setWebsite("Harvard");
+                }
+            }
+            // console.log(data.type);
         };
         return (
             <>
@@ -95,9 +99,15 @@ function Search() {
                             className="flex space-x-4"
                         >
                             <Select multiple name="options" className="flex-1">
-                                <Option value="option1">Option 1</Option>
-                                <Option value="option2">Option 2</Option>
-                                <Option value="option3">Option 3</Option>
+                                <Option value="option1">
+                                    Massachusetts Institute of Technology: MIT
+                                </Option>
+                                <Option value="option2">
+                                    University of Illinois Urbana Champaign
+                                </Option>
+                                <Option value="option3">
+                                    Harvard University
+                                </Option>
                             </Select>
                             <div className="submit-button">
                                 <Button type="submit" appearance="primary">

@@ -10,7 +10,7 @@ import {
     ArrowRight,
 } from "./HeroElements";
 import Video from "../../videos/video2.mp4";
-import { Button } from "../ButtonElements";
+import { Button, Button2 } from "../ButtonElements";
 import SliderAnimation from "./SliderAnimation";
 
 const HeroSection = () => {
@@ -45,15 +45,15 @@ const HeroSection = () => {
                     intersnhip opportunities across the globe!
                 </HeroP>
                 <HeroBtnWrapper>
-                    <Button
-                        to="signup"
+                    <Button2
+                        to="search"
                         onMouseEnter={onHover}
                         onMouseLeave={onHover}
                         primary="true"
                         dark="true"
                     >
                         Get Started {hover ? <ArrowForward /> : <ArrowRight />}
-                    </Button>
+                    </Button2>
                 </HeroBtnWrapper>
             </HeroContent>
         </HeroContainer>
