@@ -10,7 +10,7 @@ const UserSchema = new mongoose.Schema(
     name: {
       type: String,
       trim: true,
-      required: true,
+      required: false,
     },
     email: {
       type: String,
@@ -37,7 +37,7 @@ const UserSchema = new mongoose.Schema(
     },
     field: {
       type: String,
-      required: true,
+      required: false,
     },
     colleges: [
       {

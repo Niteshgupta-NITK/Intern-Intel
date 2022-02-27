@@ -4,8 +4,7 @@
   "description": "Research Internship Notifier web application based on student's choice of field ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js"
+    "test": "node src/index.js"
   },
   "keywords": [],
   "author": "Nitesh Kumar Gupta",
