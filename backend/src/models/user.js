@@ -37,20 +37,16 @@ const UserSchema = new mongoose.Schema(
     },
     field: {
       type: String,
-      required:true
+      required: true,
     },
     colleges: [
       {
-        college: {
-          type: String,
-        },
+        type: String,
       },
     ],
     profs: [
       {
-        prof: {
-          type: String,
-        },
+        type: String,
       },
     ],
     tokens: [
@@ -65,8 +61,6 @@ const UserSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-
-
 //Define public profile to be sent back to user
 UserSchema.methods.getPublicProfile = function () {
   const user = this;
@@ -79,7 +73,7 @@ UserSchema.methods.getPublicProfile = function () {
 //Define method for creating token
 UserSchema.methods.genauthToken = async function () {
   const user = this;
-  const token = jwt.sign({ _id: user._id.toString() }, 'thisisnitesh');
+  const token = jwt.sign({ _id: user._id.toString() }, "thisisnitesh");
   user.tokens = user.tokens.concat({ token });
   await user.save();
   return token;
@@ -105,6 +99,6 @@ UserSchema.pre("save", async function (next) {
   next();
 });
 //remove tasks when user is deleted
-
 const User = mongoose.model("User", UserSchema);
 module.exports = User;
+

@@ -5,7 +5,6 @@ require("../db/mongoose");
 const User = require("../models/user");
 const auth = require("../middlewares/auth");
 
-
 router.post("/users", async (req, res) => {
   const user = new User(req.body);
   const user2 = await User.findOne({ email: req.body.email });
@@ -21,8 +20,6 @@ router.post("/users", async (req, res) => {
     res.status(400).send(e);
   }
 });
-
-
 
 router.post("/users/login", async (req, res) => {
   try {
@@ -91,4 +88,37 @@ router.delete("/users/me", auth, async (req, res) => {
     res.status(404).send(e);
   }
 });
+router.get("/users/list", auth, async (req, res) => {
+  try {
+    res.status(200).send(req.user);
+  } catch (e) {
+    res.status(401).send(e);
+  }
+});
+router.post("/users/add", auth, async (req, res) => {
+  try {
+    const val = req.body.university;
+    const val2 = req.body.profs;
+    console.log("Add request called" + val + "?" + val2);
+    const user = req.user;
+    await user.colleges.push(val);
+    await user.profs.push(val2);
+
+    await user.save();
+    res.status(200).send("Done");
+  } catch (e) {
+    console.log(e);
+  }
+});
+const schedulemail= require("../mailnotify/scheduler");
+router.get("/users/test",auth,async(req,res)=>{
+  try{
+   const user = req.user;
+   schedulemail(user.email,'Hello');  
+    console.log('mail sent to '+ user.email);
+   res.status(200).send(res);
+  }catch(e){
+    console.log(e);
+  }
+})
 module.exports = router;

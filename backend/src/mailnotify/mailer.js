@@ -1,5 +1,6 @@
 const nodemailer = require("nodemailer");
 
+ function mail(email,text1){
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -9,12 +10,14 @@ const transporter = nodemailer.createTransport({
 });
 const mailOptions = {
   from: "funbits0@gmail.com",
-  to: "guptanitesh400@gmail.com",
+  to: email,
   subject: " Research Internship Opputunity ",
-  text: `Hi, Nitesh , we are happy to offer you an internship oppurtunity at our company!`,
+  text:text1,
 };
 
 transporter.sendMail(mailOptions, (err, info) => {
   if (err) console.log("Error is " + err);
-  else console.log("Mail is sent" + info);
+   else console.log("Mail is sent" + info);
 });
+};
+module.exports= mail ;
