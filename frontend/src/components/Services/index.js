@@ -20,24 +20,26 @@ const Services = () => {
                 <ServicesWrapper>
                     <ServicesCard>
                         <ServicesIcon src={Icon1} />
-                        <ServicesH2>Reduce Expenses</ServicesH2>
+                        <ServicesH2>Find relevant opportunities </ServicesH2>
                         <ServicesP>
-                            We help reduce your feesour overall revenue
+                            We help to match your interest with available
+                            opportunities
                         </ServicesP>
                     </ServicesCard>
                     <ServicesCard>
                         <ServicesIcon src={Icon2} />
-                        <ServicesH2>Virtual Offices</ServicesH2>
+                        <ServicesH2>Get Notification</ServicesH2>
                         <ServicesP>
-                            you can access our platform from anywhere in the
-                            world
+                            Get mails about various openings based on your
+                            profile
                         </ServicesP>
                     </ServicesCard>
                     <ServicesCard>
                         <ServicesIcon src={Icon3} />
-                        <ServicesH2>Premium Benifits</ServicesH2>
+                        <ServicesH2>Hassle Free Tracking </ServicesH2>
                         <ServicesP>
-                            Unlock our premium card to get instant cashback
+                            We keep an eye on specific universities and
+                            professors's research openings on behalf of you
                         </ServicesP>
                     </ServicesCard>
                 </ServicesWrapper>

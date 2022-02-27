@@ -9,8 +9,9 @@ import {
     ArrowForward,
     ArrowRight,
 } from "./HeroElements";
-import Video from "../../videos/video.mp4";
+import Video from "../../videos/video2.mp4";
 import { Button } from "../ButtonElements";
+import SliderAnimation from "./SliderAnimation";
 
 const HeroSection = () => {
     const [hover, setHover] = useState(false);
@@ -35,12 +36,13 @@ const HeroSection = () => {
                     src={Video}
                     type="video/mp4"
                 ></video>
+                {/* <SliderAnimation /> */}
             </HeroBg>
             <HeroContent>
-                <HeroH1>Virtual Banking Made Easy</HeroH1>
+                <HeroH1>Find Research Intersnhip </HeroH1>
                 <HeroP>
-                    Sign Up for a new account today and receive $250 in credit
-                    towards your next payment
+                    Sign Up for a new account today and explore various research
+                    intersnhip opportunities across the globe!
                 </HeroP>
                 <HeroBtnWrapper>
                     <Button

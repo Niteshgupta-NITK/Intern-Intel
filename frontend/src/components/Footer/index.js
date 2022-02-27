@@ -32,17 +32,16 @@ const Footer = () => {
                                 <FooterLink to="/signin">
                                     How it Works
                                 </FooterLink>
-                                <FooterLink to="/signin">
-                                    Testimonials
-                                </FooterLink>
-                                <FooterLink to="/signin">Careers</FooterLink>
-                                <FooterLink to="/signin">Investors</FooterLink>
-                                <FooterLink to="/signin">
-                                    Terms of Service
-                                </FooterLink>
+                                <FooterLink to="/">Testimonials</FooterLink>
+                                <FooterLink to="/">Careers</FooterLink>
+                                <FooterLink to="/">Investors</FooterLink>
+                                <FooterLink to="/">Terms of Service</FooterLink>
                             </FooterLinksItems>
                             <FooterLinksItems>
-                                <FooterLinkTitle>About Us</FooterLinkTitle>
+                                <FooterLinkTitle>
+                                    {" "}
+                                    Privacy Policy
+                                </FooterLinkTitle>
                                 <FooterLink to="/signin">
                                     How it Works
                                 </FooterLink>
@@ -58,7 +57,7 @@ const Footer = () => {
                         </FooterLinksWrapper>
                         <FooterLinksWrapper>
                             <FooterLinksItems>
-                                <FooterLinkTitle>About Us</FooterLinkTitle>
+                                <FooterLinkTitle>Developer2</FooterLinkTitle>
                                 <FooterLink to="/signin">
                                     How it Works
                                 </FooterLink>
@@ -72,7 +71,10 @@ const Footer = () => {
                                 </FooterLink>
                             </FooterLinksItems>
                             <FooterLinksItems>
-                                <FooterLinkTitle>About Us</FooterLinkTitle>
+                                {" "}
+                                <FooterLinkTitle>
+                                    Drop suggestions
+                                </FooterLinkTitle>
                                 <FooterLink to="/signin">
                                     How it Works
                                 </FooterLink>
