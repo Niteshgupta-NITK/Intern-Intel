@@ -13,10 +13,10 @@
 ```
 
 ## Teckstack used -
-<br/>```MongoDB```
-<br/>```Express```
-<br/>``` ReactJS```
-<br/>``` NodeJS```
+```MongoDB
+Express
+<br/> ReactJS
+<br/ NodeJS```
 
 
 ## Installation Steps -
