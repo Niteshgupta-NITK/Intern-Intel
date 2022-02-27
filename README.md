@@ -14,9 +14,11 @@ A web application to serve following purposes-
 ## To Run this project 
  Clone it using
 ```git clone git@github.com:predator4hack/hackverse-3.0.git ```
-and navigate to frotnend directory and run 
+<br/>
+and navigate to frotnend directory and run <br/>
 ```npm start```
-and navigate to backend directory and run 
+<br/>
+and navigate to backend directory and run  <br/>
 ```npm test```
 
 
