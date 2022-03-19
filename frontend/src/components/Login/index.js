@@ -10,11 +10,11 @@ import {
     Form,
     Text,
     Container,
-} from "./SiginElements";
+} from "./LoginElements";
 
 import axios from "axios";
 
-function SignIn() {
+function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
@@ -60,8 +60,8 @@ function SignIn() {
                                 required
                             ></FormInput>
                             <FormButton type="submit">Continue</FormButton>
-                            <Text>Forget password</Text>
                         </Form>
+                        <Text>Forget password</Text>
                     </FormContent>
                 </FormWrap>
             </Container>
@@ -69,4 +69,4 @@ function SignIn() {
     );
 }
 
-export default SignIn;
+export default Login;
