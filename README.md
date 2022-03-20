@@ -1,53 +1,78 @@
-# Internship Intel 
-(hackverse 3.0 hack)
+# Intern Intel
 
-## Description -
+A website that assists research enthusiasts in finding their ideal internship. Students can use this website to search through college websites for internship positions rather than having to go through the tedious process of checking up the profiles of each professor in the college. Furthermore, users can add professors or colleges to which they would like to intern, and they will be notified through email anytime a position becomes available.
 
-```A web application to serve following purposes-
+## Features
 
-1.Based on user's interest , it shows best suitable and available research internship opportunities.
+-   Seamless search for internship roles in top 10 colleges
+-   Dedicated machine learning search pipeline for each college website resulting accurate search results
+-   Get email notifications for any internship opening
+-   User Authentication
 
-2.Gives email notifications about various openings in universities wishlisted by user.
+## Demo
 
-3.Make tedious job of searching and keeping eye on universities , much smarter and negligible time consuming.
+![Intern-Intel-Demo](https://media.giphy.com/media/EkuQdB6DSrs1D6lUjz/giphy.gif)
+
+## Tech Stack
+
+**Client:** React, React SDK, TailwindCSS
+
+**Server:** Node, Express, MongoDB, Axios
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`API_KEY`
+
+`ANOTHER_API_KEY`
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/predator4hack/intern-intel
 ```
 
-## Teckstack used -
-```MongoDB```
-<br/>```Express```
-<br/> ```ReactJS```
-<br/>``` NodeJS```
+Go to the project directory and install dependencies
 
+```bash
+  cd intern-intel/frontend
+  npm install
+  cd ..
+  cd backend
+  npm install
+```
 
-## Installation Steps -
-### To run this project 
- Clone it using <br/>
-```git clone git@github.com:predator4hack/hackverse-3.0.git ```
-<br/>
-Navigate to frontend directory and run <br/>
-```npm install```<br/>
-```npm start```
-<br/>
-Navigate to backend directory and run  <br/>
-```npm install```<br/>
-```npm test```
+Start the server of both frontend and backend
 
+```bash
+  npm run test
+  cd ..
+  cd frontend
+  npm run Start
+```
 
-## Libraries and Dependencies -
-```Search io API```<br/>
-```ReactJS```<br/>
-```node-mailer``` <br/>
-```bcyrpt``` <br/>
-```json-webtoken``` <br/>
-```validator```  <br/>
-```node-schedule``` <br/>
-```mongoose```  <br/>
-```cors```    <br/>
-```axios```   <br/>
+## Screenshots
 
+#### Homepage
 
+![App Screenshot](./assets/Screenshot%20from%202022-02-27%2012-24-54.jpg)
 
+#### Search functionality along with filters
 
+![App Screenshot](./assets/Screenshot%20from%202022-02-27%2012-25.jpg)
 
+## Optimizations
 
+What optimizations did you make in your code? E.g. refactors, performance improvements, accessibility
 
+## Roadmap
+
+-   Add user dashboard
+
+## Authors
+
+-   [@predator4hack](https://github.com/predator4hack)
+-   [@Niteshgupta-NITK](https://github.com/Niteshgupta-NITK)
