@@ -23,9 +23,9 @@ A website that assists research enthusiasts in finding their ideal internship. S
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`API_KEY`
+`MONGODB_KEY`
 
-`ANOTHER_API_KEY`
+`JWT_KEY`
 
 ## Run Locally
 
@@ -63,10 +63,6 @@ Start the server of both frontend and backend
 #### Search functionality along with filters
 
 ![App Screenshot](./assets/Screenshot%20from%202022-02-27%2012-25.jpg)
-
-## Optimizations
-
-What optimizations did you make in your code? E.g. refactors, performance improvements, accessibility
 
 ## Roadmap
 

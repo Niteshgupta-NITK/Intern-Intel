@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
-mongoose.connect('mongodb+srv://root:hackverse@cluster0.poz6p.mongodb.net/hackverseapi?retryWrites=true&w=majority', {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
- 
+mongoose.connect(process.env.MONGODB_KEY, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
 });
